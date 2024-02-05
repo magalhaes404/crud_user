@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redireciona a URL raiz para o index.php
+RewriteRule ^$ index.php [L]
+
+# Redireciona URLs da forma /usuario/123 para o arquivo pages/usuario/edit.php com o ID 123
+RewriteRule ^usuario$ pages/usuario/all.php [L]
+RewriteRule ^usuario/create$  pages/usuario/create.php [L]
+RewriteRule ^usuario/(\d+)$ pages/usuario/edit.php?id=$1 [L]
